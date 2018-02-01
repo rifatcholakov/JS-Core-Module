@@ -11,5 +11,3 @@ function countWordsWithMaps(string) {
 
     allWords.forEach(word => console.log(`'${word}' -> ${wordsCount.get(word)} times`));
 }
-
-countWordsWithMaps(['Far too slow, you\'re far too slow.']);
