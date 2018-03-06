@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="wrapper">
+</div>
+<script src="book-generator.js"></script>
+<script>
+    window.onload = function () {
+        createBook("#wrapper", "Alice in Wonderland", "Lewis Carroll", 1111);
+        createBook("#wrapper", "The art of seduction", "Unknown", 2222);
+    }
+</script>
+</body>
+</html>
