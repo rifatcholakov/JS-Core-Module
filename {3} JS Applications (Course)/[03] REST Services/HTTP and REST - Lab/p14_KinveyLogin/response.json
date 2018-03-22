@@ -1,0 +1,19 @@
+{
+    "_id": "5ab3c7515ccb1510e9ee7047",
+    "username": "guest",
+    "_kmd": {
+        "lmt": "2018-03-22T15:10:09.770Z",
+        "ect": "2018-03-22T15:10:09.770Z",
+        "roles": [
+            {
+                "roleId": "cb10c7de-72a9-4309-8943-8ecb0246ea99",
+                "grantedBy": "kid_rkdfcNZcf",
+                "grantDate": "2018-03-22T15:24:19.195Z"
+            }
+        ],
+        "authtoken": "f33e3d27-c2af-4ec8-93b2-2c51fd04aaff.Hs9bxR8Aw64Am7pXy62FB9kFm2IV/N1QljNukVHKQpU="
+    },
+    "_acl": {
+        "creator": "5ab3c7515ccb1510e9ee7047"
+    }
+}
