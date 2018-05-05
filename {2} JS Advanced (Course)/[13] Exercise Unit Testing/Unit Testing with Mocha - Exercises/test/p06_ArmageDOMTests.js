@@ -32,17 +32,20 @@ describe('Armagedom Unit Tests', function () {
         nuke(htmlSelector, 2);
         expect(htmlSelector.html()).to.be.equal(oldHtml);
     });
+	
     it('Should not remove with duplicate selectors', function () {
         let selector1 = $('.nested');
         nuke(selector1, selector1);
         expect(htmlSelector.html()).to.be.equal(oldHtml);
     });
+	
     it('Should not remove with two valid selectors', function () {
         let selector1 = $('.nested');
         let selector2 = $('.inside');
         nuke(selector1, selector2);
         expect(htmlSelector.html()).to.be.equal(oldHtml);
     });
+	
     it('Should remove with valid and different selectors', function () {
         let selector1 = $('.nested');
         let selector2 = $('.target');

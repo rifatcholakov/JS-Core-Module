@@ -48,6 +48,7 @@ describe('Shared Object Unit Tests', function () {
         it('Initial value for name (should be null)', function () {
             expect(sharedObject.name).to.be.null;
         });
+		
         it('Initial value for name (should be null)', function () {
             expect(sharedObject.income).to.be.null;
         });
@@ -58,11 +59,13 @@ describe('Shared Object Unit Tests', function () {
             sharedObject.changeName('');
             expect(sharedObject.name).to.be.equal(null, 'Name should not change');
         });
+		
         it('Pass empty string with preexisting value (should not change)', function () {
             sharedObject.name = 'Nakov';
             sharedObject.changeName('');
             expect(sharedObject.name).to.be.equal('Nakov', 'Name should not change');
         });
+		
         it('Pass non-empty string (should change)', function () {
             sharedObject.changeName('Pesho');
             expect(sharedObject.name).to.be.equal('Pesho', 'Name should change');
@@ -74,6 +77,7 @@ describe('Shared Object Unit Tests', function () {
                 sharedObject.changeName('');
                 expect(nameTxt.val()).to.be.equal('Pesho', 'Name should not change');
             });
+			
             it('Pass non-empty string (should change)', function () {
                 let nameTxt = $('#name');
                 sharedObject.changeName('Vladi');
@@ -87,26 +91,31 @@ describe('Shared Object Unit Tests', function () {
             sharedObject.changeIncome({});
             expect(sharedObject.income).to.be.null;
         });
+		
         it('Pass object inside with predefined value should not change income', function () {
             sharedObject.income = 22;
             sharedObject.changeIncome({});
             expect(sharedObject.income).to.be.equal(22);
         });
+		
         it('Pass floating-point should not change income', function () {
             sharedObject.income = 33;
             sharedObject.changeIncome(22.1);
             expect(sharedObject.income).to.be.equal(33);
         });
+		
         it('Pass negative integer should not change income', function () {
             sharedObject.income = 33;
             sharedObject.changeIncome(-33);
             expect(sharedObject.income).to.be.equal(33);
         });
+		
         it('Pass zero should not change income', function () {
             sharedObject.income = 33;
             sharedObject.changeIncome(0);
             expect(sharedObject.income).to.be.equal(33);
         });
+		
         it('Pass positive integer should change income', function () {
             sharedObject.income = 33;
             sharedObject.changeIncome(44);
@@ -120,24 +129,28 @@ describe('Shared Object Unit Tests', function () {
                 sharedObject.changeIncome({});
                 expect(incomeTxt.val()).to.be.equal('33');
             });
+			
             it('Pass floating-point should not change income', function () {
                 sharedObject.changeIncome(33);
                 let incomeTxt = $('#income');
                 sharedObject.changeIncome(22.2);
                 expect(incomeTxt.val()).to.be.equal('33');
             });
+			
             it('Pass negative integer should not change income', function () {
                 sharedObject.changeIncome(33);
                 let incomeTxt = $('#income');
                 sharedObject.changeIncome(-50);
                 expect(incomeTxt.val()).to.be.equal('33');
             });
+			
             it('Pass zero should not change income', function () {
                 sharedObject.changeIncome(33);
                 let incomeTxt = $('#income');
                 sharedObject.changeIncome(0);
                 expect(incomeTxt.val()).to.be.equal('33');
             });
+			
             it('Pass positive integer should change income', function () {
                 sharedObject.changeIncome(33);
                 let incomeTxt = $('#income');
